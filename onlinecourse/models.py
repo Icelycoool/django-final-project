@@ -54,6 +54,7 @@ class Learner(models.Model):
 
 # Course model
 class Course(models.Model):
+    id = models.BigAutoField(primary_key=True)
     name = models.CharField(null=False, max_length=30, default='online course')
     image = models.ImageField(upload_to='course_images/')
     description = models.CharField(max_length=1000)
